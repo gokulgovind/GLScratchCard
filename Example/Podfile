@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GLScratchCard_Example' do
+  pod 'GLScratchCard', :path => '../'
+
+  target 'GLScratchCard_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,6 @@
+framework module GLScratchCard {
+  umbrella header "GLScratchCard-umbrella.h"
+
+  export *
+  module * { export * }
+}

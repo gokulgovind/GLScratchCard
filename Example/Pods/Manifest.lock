@@ -1,0 +1,16 @@
+PODS:
+  - GLScratchCard (0.1.0)
+
+DEPENDENCIES:
+  - GLScratchCard (from `../`)
+
+EXTERNAL SOURCES:
+  GLScratchCard:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GLScratchCard: 56013aacfb20aff19409a55b0515f63ade3e86e7
+
+PODFILE CHECKSUM: b917ca05a85282c2afe499ebcdc2ac0a95ae21f1
+
+COCOAPODS: 1.7.4

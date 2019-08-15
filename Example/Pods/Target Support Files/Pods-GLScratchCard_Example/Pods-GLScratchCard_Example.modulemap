@@ -1,0 +1,6 @@
+framework module Pods_GLScratchCard_Example {
+  umbrella header "Pods-GLScratchCard_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

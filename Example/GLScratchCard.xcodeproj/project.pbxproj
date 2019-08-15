@@ -30,8 +30,8 @@
 /* Begin PBXFileReference section */
 		0CD7B59F1DFB1AB3C5AFFA6D /* Pods-GLScratchCard_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLScratchCard_Example.release.xcconfig"; path = "Target Support Files/Pods-GLScratchCard_Example/Pods-GLScratchCard_Example.release.xcconfig"; sourceTree = "<group>"; };
 		12BEFAC123BA46970B2A57D1 /* Pods_GLScratchCard_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLScratchCard_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B4B4F7197D97B7C771B495 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		2CF5C04F7DE1FEBD4E5CF94D /* GLScratchCard.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GLScratchCard.podspec; path = ../GLScratchCard.podspec; sourceTree = "<group>"; };
+		27B4B4F7197D97B7C771B495 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2CF5C04F7DE1FEBD4E5CF94D /* GLScratchCard.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GLScratchCard.podspec; path = ../GLScratchCard.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4D123D2E8B82EC2524D969B5 /* Pods-GLScratchCard_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLScratchCard_Tests.release.xcconfig"; path = "Target Support Files/Pods-GLScratchCard_Tests/Pods-GLScratchCard_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GLScratchCard_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLScratchCard_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		80B294CB75A1A870F88D5483 /* Pods-GLScratchCard_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLScratchCard_Example.debug.xcconfig"; path = "Target Support Files/Pods-GLScratchCard_Example/Pods-GLScratchCard_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B2CA7315509D5BACB315E981 /* Pods-GLScratchCard_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLScratchCard_Tests.debug.xcconfig"; path = "Target Support Files/Pods-GLScratchCard_Tests/Pods-GLScratchCard_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C36B540A0797B79A7A95D3A2 /* Pods_GLScratchCard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLScratchCard_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB449915FF5DD66D6222DFAB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		DB449915FF5DD66D6222DFAB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,6 @@
 				B2CA7315509D5BACB315E981 /* Pods-GLScratchCard_Tests.debug.xcconfig */,
 				4D123D2E8B82EC2524D969B5 /* Pods-GLScratchCard_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

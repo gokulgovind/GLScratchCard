@@ -1,0 +1,22 @@
+{
+  "name": "GLScratchCard",
+  "version": "0.1.0",
+  "summary": "A short description of GLScratchCard.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/gokulece26@gmail.com/GLScratchCard",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gokulece26@gmail.com": "gokul.g@ndot.in"
+  },
+  "source": {
+    "git": "https://github.com/gokulece26@gmail.com/GLScratchCard.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GLScratchCard/Classes/**/*"
+}

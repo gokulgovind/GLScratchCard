@@ -11,10 +11,12 @@
 		50CB99260AF69F8738A78EDD6DC1D85B /* Pods-GLScratchCard_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22566EA530EEDC8FABC8B6B361185438 /* Pods-GLScratchCard_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51037CFB5358B27390EA3910E84952B4 /* Pods-GLScratchCard_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A5F0BC1A0D8B2C4BBEF5C13647E1C13E /* Pods-GLScratchCard_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		580D5FFA4502E92D01F532E4542D36E6 /* GLScratchCard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E60EBBEDDE5B76DA7E2AE384953132 /* GLScratchCard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5856E617230961D30003D436 /* GLScratchCardUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5856E616230961D30003D436 /* GLScratchCardUtility.swift */; };
+		586A6D9B2307BA790029642A /* GLScratchCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586A6D9A2307BA790029642A /* GLScratchCardController.swift */; };
+		586A6D9F2307DB070029642A /* GLScratchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586A6D9E2307DB070029642A /* GLScratchCardView.swift */; };
 		5B033E97B37EE74A0C7036911A5286EA /* Pods-GLScratchCard_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 546EFADCE447A6D99F5EA62A8CC326E9 /* Pods-GLScratchCard_Example-dummy.m */; };
 		63DB045946E8E364AF65D211F4C148D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		C97FAAB480EC8A140D501ABC317E774C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		CD0654FC78A8C085DCE9371FFA496CD5 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936F36E529342DC9A6D02ED89C3B61F /* ReplaceMe.swift */; };
 		CF61BFEE935FDF589D74233998DE7AAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		D21C6B0DEE9D208E68A176ECFD7CD512 /* GLScratchCard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DFC6F5307B1958D61AF01CF92AE156 /* GLScratchCard-dummy.m */; };
 /* End PBXBuildFile section */
@@ -47,25 +49,27 @@
 		504AA11702E1B6C51434499F9C3BA1A0 /* Pods-GLScratchCard_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLScratchCard_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		546EFADCE447A6D99F5EA62A8CC326E9 /* Pods-GLScratchCard_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GLScratchCard_Example-dummy.m"; sourceTree = "<group>"; };
 		56E5DD0B37515C73BE769CAA0FCC619F /* Pods-GLScratchCard_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLScratchCard_Example-frameworks.sh"; sourceTree = "<group>"; };
-		5C4B2705FB260AC50D3F27C748091F48 /* Pods_GLScratchCard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GLScratchCard_Tests.framework; path = "Pods-GLScratchCard_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5856E616230961D30003D436 /* GLScratchCardUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLScratchCardUtility.swift; sourceTree = "<group>"; };
+		586A6D9A2307BA790029642A /* GLScratchCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLScratchCardController.swift; sourceTree = "<group>"; };
+		586A6D9E2307DB070029642A /* GLScratchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLScratchCardView.swift; sourceTree = "<group>"; };
+		5C4B2705FB260AC50D3F27C748091F48 /* Pods_GLScratchCard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLScratchCard_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F26C54F3C6DBBED0F62B85B996482A /* Pods-GLScratchCard_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLScratchCard_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		6338196B316F9B30A3B405421CB7295D /* GLScratchCard.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GLScratchCard.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6AE8315BA5F45089AEBC17B9469A8BE9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6338196B316F9B30A3B405421CB7295D /* GLScratchCard.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GLScratchCard.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6AE8315BA5F45089AEBC17B9469A8BE9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7510280E835DCB8906F0EC46429A40CD /* Pods-GLScratchCard_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GLScratchCard_Example.modulemap"; sourceTree = "<group>"; };
 		77DFC6F5307B1958D61AF01CF92AE156 /* GLScratchCard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GLScratchCard-dummy.m"; sourceTree = "<group>"; };
-		785DC7E2CEB718553E2222C4FC1BAF72 /* GLScratchCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GLScratchCard.framework; path = GLScratchCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		785DC7E2CEB718553E2222C4FC1BAF72 /* GLScratchCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GLScratchCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894CCEFF60091D67C733F7EAE14BE5ED /* GLScratchCard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GLScratchCard.modulemap; sourceTree = "<group>"; };
 		8B07D9C1576E9779E8CB3ED87235A0F3 /* Pods-GLScratchCard_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLScratchCard_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8DEA3183A650FA850B3F0068682046D6 /* Pods-GLScratchCard_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLScratchCard_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8F93D997F86ACEDC29E3BED40D6E9015 /* Pods-GLScratchCard_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLScratchCard_Example-Info.plist"; sourceTree = "<group>"; };
 		94A3DA99D08FE6832A725FB83EC45B0A /* GLScratchCard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLScratchCard-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5F0BC1A0D8B2C4BBEF5C13647E1C13E /* Pods-GLScratchCard_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GLScratchCard_Tests-umbrella.h"; sourceTree = "<group>"; };
-		B936F36E529342DC9A6D02ED89C3B61F /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GLScratchCard/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		BDBDE454AFF47FBF39E1EDC5043DBDBC /* Pods-GLScratchCard_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLScratchCard_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C2E60EBBEDDE5B76DA7E2AE384953132 /* GLScratchCard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLScratchCard-umbrella.h"; sourceTree = "<group>"; };
-		CEACCF62A8A7A95A3C02EF6FBD0DC46D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		DBE4ECF155326A1F86BFBE22FD8C8684 /* Pods_GLScratchCard_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GLScratchCard_Example.framework; path = "Pods-GLScratchCard_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEACCF62A8A7A95A3C02EF6FBD0DC46D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DBE4ECF155326A1F86BFBE22FD8C8684 /* Pods_GLScratchCard_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLScratchCard_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E089BBF660528FF7CC6901B8A8F36153 /* Pods-GLScratchCard_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLScratchCard_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ED2111C0E07DF92DAC4CA75C7792D93F /* GLScratchCard-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GLScratchCard-Info.plist"; sourceTree = "<group>"; };
 		F8E984010FEA972F16C566CCB7A75792 /* Pods-GLScratchCard_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLScratchCard_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +141,9 @@
 		69C0D792B2F072FE3307FAA0E1336533 /* GLScratchCard */ = {
 			isa = PBXGroup;
 			children = (
-				B936F36E529342DC9A6D02ED89C3B61F /* ReplaceMe.swift */,
+				586A6D9A2307BA790029642A /* GLScratchCardController.swift */,
+				586A6D9E2307DB070029642A /* GLScratchCardView.swift */,
+				5856E616230961D30003D436 /* GLScratchCardUtility.swift */,
 				2DFF0D436487CFAAA19EBA88EC7AB639 /* Pod */,
 				B740FC79B706308D0730DA53720E9483 /* Support Files */,
 			);
@@ -372,8 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586A6D9F2307DB070029642A /* GLScratchCardView.swift in Sources */,
+				586A6D9B2307BA790029642A /* GLScratchCardController.swift in Sources */,
+				5856E617230961D30003D436 /* GLScratchCardUtility.swift in Sources */,
 				D21C6B0DEE9D208E68A176ECFD7CD512 /* GLScratchCard-dummy.m in Sources */,
-				CD0654FC78A8C085DCE9371FFA496CD5 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +427,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GLScratchCard/GLScratchCard-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GLScratchCard/GLScratchCard-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GLScratchCard/GLScratchCard.modulemap";
 				PRODUCT_MODULE_NAME = GLScratchCard;
@@ -517,13 +525,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -580,7 +587,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -676,7 +683,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GLScratchCard/GLScratchCard-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GLScratchCard/GLScratchCard-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GLScratchCard/GLScratchCard.modulemap";
 				PRODUCT_MODULE_NAME = GLScratchCard;

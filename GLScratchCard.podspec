@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'GLScratchCard/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'GLScratchCard' => ['GLScratchCard/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'GLScratchCard' => ['GLScratchCard/Classes/*.{png,storyboard,lproj}']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

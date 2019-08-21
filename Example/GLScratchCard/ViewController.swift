@@ -30,6 +30,9 @@ class ViewController: UIViewController  {
         let controller = GLScratchCardController(title: "")
         controller.scratchCardView.addDelegate(delegate: self)
         controller.scratchCardView.doneButtonTitle = "Gift to a friend"
+        controller.scratchCardView.scratchCardTitle = "Earn up to $1,0000"
+        controller.scratchCardView.scratchCardSubTitle = "From Google Pay \nEarned for paying \nGokul"
+        
         controller.presentScratchController()
 
     }

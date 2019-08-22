@@ -12,6 +12,8 @@
 		51037CFB5358B27390EA3910E84952B4 /* Pods-GLScratchCard_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A5F0BC1A0D8B2C4BBEF5C13647E1C13E /* Pods-GLScratchCard_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		580D5FFA4502E92D01F532E4542D36E6 /* GLScratchCard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E60EBBEDDE5B76DA7E2AE384953132 /* GLScratchCard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5856E617230961D30003D436 /* GLScratchCardUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5856E616230961D30003D436 /* GLScratchCardUtility.swift */; };
+		585A8C50230E32E700844507 /* GLScratchCardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585A8C4F230E32E700844507 /* GLScratchCardImageView.swift */; };
+		585A8C54230E385B00844507 /* scratch_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 585A8C53230E385A00844507 /* scratch_image.png */; };
 		585E7405230C27640065BB32 /* GLScratchCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 585E7404230C27640065BB32 /* GLScratchCardView.xib */; };
 		586A6D9B2307BA790029642A /* GLScratchCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586A6D9A2307BA790029642A /* GLScratchCardController.swift */; };
 		586A6D9F2307DB070029642A /* GLScratchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586A6D9E2307DB070029642A /* GLScratchCardView.swift */; };
@@ -51,6 +53,8 @@
 		546EFADCE447A6D99F5EA62A8CC326E9 /* Pods-GLScratchCard_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GLScratchCard_Example-dummy.m"; sourceTree = "<group>"; };
 		56E5DD0B37515C73BE769CAA0FCC619F /* Pods-GLScratchCard_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLScratchCard_Example-frameworks.sh"; sourceTree = "<group>"; };
 		5856E616230961D30003D436 /* GLScratchCardUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLScratchCardUtility.swift; sourceTree = "<group>"; };
+		585A8C4F230E32E700844507 /* GLScratchCardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLScratchCardImageView.swift; sourceTree = "<group>"; };
+		585A8C53230E385A00844507 /* scratch_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scratch_image.png; sourceTree = "<group>"; };
 		585E7404230C27640065BB32 /* GLScratchCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GLScratchCardView.xib; sourceTree = "<group>"; };
 		586A6D9A2307BA790029642A /* GLScratchCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLScratchCardController.swift; sourceTree = "<group>"; };
 		586A6D9E2307DB070029642A /* GLScratchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLScratchCardView.swift; sourceTree = "<group>"; };
@@ -146,7 +150,9 @@
 				586A6D9A2307BA790029642A /* GLScratchCardController.swift */,
 				586A6D9E2307DB070029642A /* GLScratchCardView.swift */,
 				585E7404230C27640065BB32 /* GLScratchCardView.xib */,
+				585A8C4F230E32E700844507 /* GLScratchCardImageView.swift */,
 				5856E616230961D30003D436 /* GLScratchCardUtility.swift */,
+				585A8C53230E385A00844507 /* scratch_image.png */,
 				2DFF0D436487CFAAA19EBA88EC7AB639 /* Pod */,
 				B740FC79B706308D0730DA53720E9483 /* Support Files */,
 			);
@@ -356,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585A8C54230E385B00844507 /* scratch_image.png in Resources */,
 				585E7405230C27640065BB32 /* GLScratchCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585A8C50230E32E700844507 /* GLScratchCardImageView.swift in Sources */,
 				586A6D9F2307DB070029642A /* GLScratchCardView.swift in Sources */,
 				586A6D9B2307BA790029642A /* GLScratchCardController.swift in Sources */,
 				5856E617230961D30003D436 /* GLScratchCardUtility.swift in Sources */,

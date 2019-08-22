@@ -26,18 +26,22 @@ class ViewController: UIViewController  {
     }
 
     @IBAction func showDemo(_ sender: UIButton) {
+        let view = UIView()
+        view.backgroundColor = .red
         
         let controller = GLScratchCardController(title: "")
         controller.scratchCardView.addDelegate(delegate: self)
         controller.scratchCardView.doneButtonTitle = "Gift to a friend"
         controller.scratchCardView.scratchCardTitle = "Earn up to $1,0000"
         controller.scratchCardView.scratchCardSubTitle = "From Google Pay \nEarned for paying \nGokul"
-        
+        controller.scratchCardView.scratchCardHiddenView = view
         controller.presentScratchController()
 
     }
 }
 
 extension ViewController: GLScratchCardDelegate {
-    
+    func scratchProgressDidChange(percentage: Float) {
+        print("Scratch Percentage: \(percentage)")
+    }
 }

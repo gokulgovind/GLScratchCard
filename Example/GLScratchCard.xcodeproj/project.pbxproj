@@ -170,7 +170,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				7D9B56D71C4819476A4AEB23 /* [CP] Embed Pods Frameworks */,
+				457ECD510884D624E175BF6A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7N2BQSEH4R;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7N2BQSEH4R;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -283,22 +285,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7D9B56D71C4819476A4AEB23 /* [CP] Embed Pods Frameworks */ = {
+		457ECD510884D624E175BF6A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GLScratchCard_Example/Pods-GLScratchCard_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GLScratchCard/GLScratchCard.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GLScratchCard_Example/Pods-GLScratchCard_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GLScratchCard/GLScratchCard.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GLScratchCard.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GLScratchCard.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GLScratchCard_Example/Pods-GLScratchCard_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GLScratchCard_Example/Pods-GLScratchCard_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AC245E22E0A147A92ED1E8AF /* [CP] Check Pods Manifest.lock */ = {
@@ -477,6 +479,7 @@
 			baseConfigurationReference = 80B294CB75A1A870F88D5483 /* Pods-GLScratchCard_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7N2BQSEH4R;
 				INFOPLIST_FILE = GLScratchCard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -494,6 +497,7 @@
 			baseConfigurationReference = 0CD7B59F1DFB1AB3C5AFFA6D /* Pods-GLScratchCard_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7N2BQSEH4R;
 				INFOPLIST_FILE = GLScratchCard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -510,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2CA7315509D5BACB315E981 /* Pods-GLScratchCard_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7N2BQSEH4R;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -532,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D123D2E8B82EC2524D969B5 /* Pods-GLScratchCard_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7N2BQSEH4R;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

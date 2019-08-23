@@ -30,10 +30,10 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'GLScratchCard/Classes/**/*'
+  s.source_files = 'GLScratchCard/**/*'
   
   s.resource_bundles = {
-    'GLScratchCard' => ['GLScratchCard/Classes/*.{png,storyboard,lproj}']
+    'GLScratchCard' => ['GLScratchCard/*.{png,storyboard,lproj,xib}']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

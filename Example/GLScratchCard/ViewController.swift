@@ -10,11 +10,6 @@ import UIKit
 import GLScratchCard
 
 class ViewController: UIViewController  {
-    func didCloseButtonPressed(sender: UIButton) {
-        print("close button ViewController")
-    }
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,8 +21,8 @@ class ViewController: UIViewController  {
     }
 
     @IBAction func showDemo(_ sender: UIButton) {
-        let view = UIView()
-        view.backgroundColor = .red
+        let view = UIImageView()
+        view.image = UIImage(named: "cash_back")
         
         let controller = GLScratchCardController(title: "")
         controller.scratchCardView.addDelegate(delegate: self)
@@ -35,13 +30,32 @@ class ViewController: UIViewController  {
         controller.scratchCardView.scratchCardTitle = "Earn up to $1,0000"
         controller.scratchCardView.scratchCardSubTitle = "From Google Pay \nEarned for paying \nGokul"
         controller.scratchCardView.scratchCardHiddenView = view
+        controller.scratchCardView.scratchCardImageView.addDelegate(delegate: self)
+        controller.scratchCardView.scratchCardImageView.notifyOnReachingScratchPercentage = 60
         controller.presentScratchController()
 
     }
 }
 
 extension ViewController: GLScratchCardDelegate {
-    func scratchProgressDidChange(percentage: Float) {
-        print("Scratch Percentage: \(percentage)")
+    func didDoneButtonPressed(sender: UIButton) {
+        print("Done button ViewController")
     }
+    
+    func didCloseButtonPressed(sender: UIButton) {
+        print("close button ViewController")
+    }
+}
+
+extension ViewController: GLScratchCarImageViewDelegate {
+    func scratchpercentageDidChange(value: Int) {
+        
+    }
+    
+    func reachedDesiredScratchPercentage(percentage: Int, imageView: GLScratchCardImageView) {
+        print("Scratch percentage reached: \(percentage) percentage")
+        imageView.scratchAndShowValue()
+    }
+    
+    
 }

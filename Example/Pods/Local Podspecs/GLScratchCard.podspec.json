@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "GLScratchCard/Classes/**/*"
+  "source_files": "GLScratchCard/**/*",
+  "resource_bundles": {
+    "GLScratchCard": [
+      "GLScratchCard/*.{png,storyboard,lproj,xib}"
+    ]
+  }
 }

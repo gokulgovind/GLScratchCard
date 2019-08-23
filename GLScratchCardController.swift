@@ -13,18 +13,16 @@ open class GLScratchCardController: NSObject {
     lazy public var scratchCardView :GLScratchCardView = {
         let view = GLScratchCardView(frame: (application.keyWindow?.frame)!)
         view.addDelegate(delegate: self)
+        view.scratchCardImageView.addDelegate(delegate: self)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         return view
     }()
-    
-    
     
     public init(title: String) {
         super.init()
     }
     
-    
     public func presentScratchController() {
-        scratchCardView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         scratchCardView.translatesAutoresizingMaskIntoConstraints = false
         
         keyWindow?.addSubview(scratchCardView)
@@ -42,6 +40,9 @@ open class GLScratchCardController: NSObject {
 }
 
 extension GLScratchCardController: GLScratchCardDelegate {
+    public func didDoneButtonPressed(sender: UIButton) {
+        
+    }
     public func didCloseButtonPressed(sender: UIButton) {
         if let view = keyWindow?.subviews.filter({ (view) -> Bool in
             return view.isKind(of: GLScratchCardView.self)
@@ -50,4 +51,16 @@ extension GLScratchCardController: GLScratchCardDelegate {
         }
         
     }
+}
+
+extension GLScratchCardController: GLScratchCarImageViewDelegate {
+    public func scratchpercentageDidChange(value: Int) {
+        
+    }
+    
+    public func reachedDesiredScratchPercentage(percentage: Int, imageView: GLScratchCardImageView) {
+        
+    }
+    
+    
 }

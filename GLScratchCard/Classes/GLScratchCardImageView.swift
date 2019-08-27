@@ -8,17 +8,23 @@
 import UIKit
 
 public protocol GLScratchCarImageViewDelegate {
-    func scratchpercentageDidChange(value: Int)
-    func reachedDesiredScratchPercentage(percentage: Int, imageView: GLScratchCardImageView)
+    func scratchpercentageDidChange(value: Float)
+    func didScratchStarted()
+    func didScratchEnded()
 }
 public class GLScratchCardImageView: UIImageView {
     private var lastPoint: CGPoint?
     
     public var lineType: CGLineCap = .round
     public var lineWidth: CGFloat = 30
-    public var notifyOnReachingScratchPercentage: Int = 1
     
+    public var benchMarkScratchPercentage: Float = 40
+    fileprivate var currentScratchPercentage: Float = 0
+    internal var topLayerImageReference :UIImage?
+    fileprivate var isScratchStarted = false
+    fileprivate var isScratchEnded = false
     fileprivate var delegates = [GLScratchCarImageViewDelegate?]()
+    fileprivate var timer:Timer?
     
     override public func awakeFromNib() {
         super.awakeFromNib()
@@ -29,10 +35,22 @@ public class GLScratchCardImageView: UIImageView {
         delegates.append(delegate)
     }
     
-    public func scratchAndShowValue() {
-        self.image = nil
+    @objc public func scratchAndShowBottomLayerView() {
+        if currentScratchPercentage >= benchMarkScratchPercentage {
+            self.image = nil
+            scratchEnded()
+        }else{
+            self.image = topLayerImageReference
+        }
     }
     
+    fileprivate func scratchEnded() {
+        currentScratchPercentage = 100
+        isScratchEnded = true
+        for delegate in delegates {
+            delegate?.didScratchEnded()
+        }
+    }
     // Scratch
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard  let touch = touches.first else {
@@ -41,8 +59,26 @@ public class GLScratchCardImageView: UIImageView {
         lastPoint = touch.location(in: self)
     }
     
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+        timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.scratchAndShowBottomLayerView), userInfo: nil, repeats: true)
+    }
+    
     override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
         
+        if !isScratchStarted {
+            isScratchStarted = true
+            for delegate in delegates {
+                delegate?.didScratchStarted()
+            }
+        }
         guard  let touch = touches.first, let point = lastPoint, let img = image  else {
             return
         }
@@ -50,14 +86,13 @@ public class GLScratchCardImageView: UIImageView {
         let currentLocation = touch.location(in: self)
         eraseBetween(fromPoint: point, currentPoint: currentLocation)
         
-        let progress = Int(round(alphaOnlyPersentage(img: img)) * 100)
-        if progress == notifyOnReachingScratchPercentage {
-            for delegate in delegates {
-                delegate?.reachedDesiredScratchPercentage(percentage: notifyOnReachingScratchPercentage, imageView: self)
-            }
+        currentScratchPercentage = alphaOnlyPersentage(img: img) * 100
+
+        if currentScratchPercentage >= 100 && !isScratchEnded {
+            scratchEnded()
         }
         for delegate in delegates {
-            delegate?.scratchpercentageDidChange(value: progress)
+            delegate?.scratchpercentageDidChange(value: currentScratchPercentage)
         }
         
         lastPoint = currentLocation

@@ -15,6 +15,7 @@ public protocol GLScratchCardDelegate {
 public class GLScratchCardView: UIView {
     // UIComponents
     @IBOutlet weak var scratchView:UIView!
+    @IBOutlet weak var swipeBackToView:UIView!
     @IBOutlet weak var scratchContainerView:UIView!
     @IBOutlet weak var closeButton:UIButton!
     @IBOutlet weak var doneButton:UIButton!
@@ -24,9 +25,9 @@ public class GLScratchCardView: UIView {
     
     // Delegate
     fileprivate var delegates = [GLScratchCardDelegate?]()
-    
+    internal var isScratchStarted = false
     //Var&Constants
-    public var scratchCardHiddenView:UIView? {
+    public var bottomLayerView:UIView? {
         get {
             return nil
         }set{
@@ -45,6 +46,23 @@ public class GLScratchCardView: UIView {
             }
         }
     }
+    
+    public var topLayerImage:UIImage {
+        get {
+            let bundle = Bundle(for: GLScratchCardView.self)
+            bundle.loadNibNamed("GLScratchCardView", owner:self, options:nil)
+            if let imagePath = bundle.path(forResource: "scratch_image_new", ofType: "png") {
+                let returnImage = UIImage(contentsOfFile: imagePath) ?? UIImage()
+                scratchCardImageView.topLayerImageReference = returnImage
+                return returnImage
+            }
+            return UIImage()
+        }set{
+            scratchCardImageView.image = newValue
+            scratchCardImageView.topLayerImageReference = newValue
+        }
+    }
+    public var afterScratchDoneButtonTitle = "Done"
     public var doneButtonTitle:String {
         get {
             return "Done"
@@ -52,6 +70,7 @@ public class GLScratchCardView: UIView {
             doneButton.setTitle(newValue, for: .normal)
         }
     }
+    public var afterScratchTitle = ""
     public var scratchCardTitle :String {
         get {
             return ""
@@ -59,6 +78,7 @@ public class GLScratchCardView: UIView {
             scratchCardTitleLabel.text = newValue
         }
     }
+    public var afterScratchSubTitle = ""
     public var scratchCardSubTitle :String {
         get {
             return ""
@@ -71,6 +91,7 @@ public class GLScratchCardView: UIView {
         super.init(frame: frame)
         loadViewFromNib()
         setupUIComponents()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -80,9 +101,8 @@ public class GLScratchCardView: UIView {
     fileprivate func loadViewFromNib() {
         let bundle = Bundle(for: GLScratchCardView.self)
         bundle.loadNibNamed("GLScratchCardView", owner:self, options:nil)
-        if let imagePath = bundle.path(forResource: "scratch_image", ofType: "png") {
-            scratchCardImageView.image = UIImage(contentsOfFile: imagePath)
-        }
+        
+        scratchCardImageView.image = topLayerImage
         guard let content = scratchView else { return }
         content.frame = self.bounds
         self.addSubview(content)
@@ -93,6 +113,13 @@ public class GLScratchCardView: UIView {
         scratchCardTitleLabel.text = scratchCardTitle
         scratchCardSubTitleLabel.text = scratchCardSubTitle
         scratchContainerView.bringSubview(toFront: scratchCardImageView)
+        swipeBackToView.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            if !self.isScratchStarted {
+                self.swipeBackToView.isHidden = false
+                self.scratchContainerView.bringSubview(toFront: self.swipeBackToView)
+            }
+        }
     }
     
     public func addDelegate(delegate: GLScratchCardDelegate?) {

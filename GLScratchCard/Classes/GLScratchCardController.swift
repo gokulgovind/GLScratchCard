@@ -54,13 +54,27 @@ extension GLScratchCardController: GLScratchCardDelegate {
 }
 
 extension GLScratchCardController: GLScratchCarImageViewDelegate {
-    public func scratchpercentageDidChange(value: Int) {
-        
+    
+    public func scratchpercentageDidChange(value: Float) {
+        print("Progress: \(value)")
+    }
+
+    public func didScratchStarted() {
+        scratchCardView.swipeBackToView.isHidden = true
+        scratchCardView.doneButton.isHidden = true
+        scratchCardView.scratchCardTitleLabel.isHidden = true
+        scratchCardView.scratchCardSubTitleLabel.isHidden = true
+        scratchCardView.isScratchStarted = true
     }
     
-    public func reachedDesiredScratchPercentage(percentage: Int, imageView: GLScratchCardImageView) {
+    public func didScratchEnded() {
+        scratchCardView.doneButton.isHidden = false
+        scratchCardView.scratchCardTitleLabel.isHidden = false
+        scratchCardView.scratchCardSubTitleLabel.isHidden = false
         
+        scratchCardView.doneButton.setTitle(scratchCardView.afterScratchDoneButtonTitle , for: .normal)
+        scratchCardView.scratchCardTitleLabel.text = scratchCardView.afterScratchTitle
+        scratchCardView.scratchCardSubTitleLabel.text = scratchCardView.afterScratchSubTitle
     }
-    
     
 }

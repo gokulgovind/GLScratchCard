@@ -86,11 +86,13 @@ public class GLScratchCardImageView: UIImageView {
     }
     
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if timer != nil {
-            timer?.invalidate()
-            timer = nil
+        if benchMarkScratchPercentage != 0 {
+            if timer != nil {
+                timer?.invalidate()
+                timer = nil
+            }
+            timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.scratchAndShowBottomLayerView), userInfo: nil, repeats: true)
         }
-        timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.scratchAndShowBottomLayerView), userInfo: nil, repeats: true)
     }
     
     override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

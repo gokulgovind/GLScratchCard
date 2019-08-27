@@ -7,6 +7,9 @@
 
 import UIKit
 
+let application = UIApplication.shared
+let keyWindow = UIApplication.shared.keyWindow
+
 /// Main controller that contains Scratch UI
 open class GLScratchCardController: NSObject {
 

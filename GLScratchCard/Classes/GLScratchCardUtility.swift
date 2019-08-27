@@ -2,7 +2,7 @@
 //  GLScratchCardUtility.swift
 //  GLScratchCard
 //
-//  Created by Payoda on 18/08/19.
+//  Created by gokulece26@gmail.com on 18/08/19.
 //
 
 import Foundation

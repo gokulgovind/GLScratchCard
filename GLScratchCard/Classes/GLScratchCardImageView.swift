@@ -2,23 +2,45 @@
 //  GLScratchCardImageView.swift
 //  GLScratchCard
 //
-//  Created by Payoda on 22/08/19.
+//  Created by gokulece26@gmail.com on 22/08/19.
 //
 
 import UIKit
 
+// MARK:- Delegate
+/// **Delegate:** Helps to track scratch behaviour like,
+/// Start, Stop and Progressive scratch percentage
 public protocol GLScratchCarImageViewDelegate {
+    /// **Delegate:** When user starts scratching, this delegate function will give scratch percentage
+    ///
+    /// - Parameter value: Scratch percentage 0 to 100
     func scratchpercentageDidChange(value: Float)
+    /// **Delegate:** Intimates when scratch starts
     func didScratchStarted()
+    /// **Delegate:** Intimates when scratch ends
     func didScratchEnded()
 }
+// MARK:-
+
+
+/// GLScratchCardImageView is a sun class of UIImageview, Provides scratch effect over image view.
 public class GLScratchCardImageView: UIImageView {
+    // MARK: Public variables
     private var lastPoint: CGPoint?
-    
+    /// Type of scratch line, enum of **CGLineCap**. Default value is *.round*
+    /// - .round
+    /// - .square
+    /// - .butt
     public var lineType: CGLineCap = .round
+    /// Scratch line width, Default value is **30**
     public var lineWidth: CGFloat = 30
     
+    /// Default value is **40**, **Important:** Setting 0 will disable this functionality.
+    /// - If user scratched above this value and stay ideal for few seconds, Auto scratch will happen and reviles the bottom view
+    /// - If user scratched below this value and stay ideal for few seconds, Scratched portion will be gone. User has to scratch again
     public var benchMarkScratchPercentage: Float = 40
+    
+    // MARK:- Internal Variables
     fileprivate var currentScratchPercentage: Float = 0
     internal var topLayerImageReference :UIImage?
     fileprivate var isScratchStarted = false
@@ -26,16 +48,20 @@ public class GLScratchCardImageView: UIImageView {
     fileprivate var delegates = [GLScratchCarImageViewDelegate?]()
     fileprivate var timer:Timer?
     
+    // MARK:-
     override public func awakeFromNib() {
         super.awakeFromNib()
         isUserInteractionEnabled = true
     }
     
+    /// Helps in subscribing to *GLScratchCarImageViewDelegate*, from multiple places at same time
+    ///
+    /// - Parameter delegate: self
     public func addDelegate(delegate: GLScratchCarImageViewDelegate?) {
         delegates.append(delegate)
     }
     
-    @objc public func scratchAndShowBottomLayerView() {
+    @objc fileprivate func scratchAndShowBottomLayerView() {
         if currentScratchPercentage >= benchMarkScratchPercentage {
             self.image = nil
             scratchEnded()
@@ -51,7 +77,7 @@ public class GLScratchCardImageView: UIImageView {
             delegate?.didScratchEnded()
         }
     }
-    // Scratch
+    // MARK:- Core scratch functionality
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard  let touch = touches.first else {
             return
@@ -99,6 +125,11 @@ public class GLScratchCardImageView: UIImageView {
     }
     
     
+    /// Creats scratch effect between two points
+    ///
+    /// - Parameters:
+    ///   - fromPoint: Starting Point
+    ///   - currentPoint: Ending Point
     fileprivate func eraseBetween(fromPoint: CGPoint, currentPoint: CGPoint) {
         
         UIGraphicsBeginImageContext(self.frame.size)
@@ -122,7 +153,11 @@ public class GLScratchCardImageView: UIImageView {
         UIGraphicsEndImageContext()
     }
     
-    private func alphaOnlyPersentage(img: UIImage) -> Float {
+    /// To get percentage of scratch effect applied
+    ///
+    /// - Parameter img: UIImage
+    /// - Returns: Scratch percentage
+    fileprivate func alphaOnlyPersentage(img: UIImage) -> Float {
         
         let width = Int(img.size.width)
         let height = Int(img.size.height)

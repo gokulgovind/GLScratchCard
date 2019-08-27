@@ -2,18 +2,22 @@
 //  GLScratchCardView.swift
 //  GLScratchCard
 //
-//  Created by Payoda on 17/08/19.
+//  Created by gokulece26@gmail.com on 17/08/19.
 //
 
 import UIKit
 
+// MARK: - Delegate
+/// **Delegate:** Notifies when UIButton action happens
+/// - When close button pressed
+/// - When Done button pressed
 public protocol GLScratchCardDelegate {
     func didCloseButtonPressed(sender: UIButton)
     func didDoneButtonPressed(sender: UIButton)
 }
 
 public class GLScratchCardView: UIView {
-    // UIComponents
+    // MARK: - IBOutlets
     @IBOutlet weak var scratchView:UIView!
     @IBOutlet weak var swipeBackToView:UIView!
     @IBOutlet weak var scratchContainerView:UIView!
@@ -23,10 +27,13 @@ public class GLScratchCardView: UIView {
     @IBOutlet weak var scratchCardSubTitleLabel:UILabel!
     @IBOutlet weak public var scratchCardImageView:GLScratchCardImageView!
     
-    // Delegate
+    // MARK: - Internal Variables
     fileprivate var delegates = [GLScratchCardDelegate?]()
     internal var isScratchStarted = false
-    //Var&Constants
+    
+    // MARK: - Public Variables
+    /// UIView that will be the *bottom layer* of scratch controller
+    /// (i.e) **Will displayed when scratch happens on top layer**
     public var bottomLayerView:UIView? {
         get {
             return nil
@@ -47,6 +54,8 @@ public class GLScratchCardView: UIView {
         }
     }
     
+    /// UIImage that will be the *top layer* of scratch controller
+    /// Scratch effect will be applied to this image
     public var topLayerImage:UIImage {
         get {
             let bundle = Bundle(for: GLScratchCardView.self)
@@ -62,7 +71,15 @@ public class GLScratchCardView: UIView {
             scratchCardImageView.topLayerImageReference = newValue
         }
     }
+    
+    /// Done button can have two titles
+    /// * One before scratch starts
+    /// * One after scratch ends
     public var afterScratchDoneButtonTitle = "Done"
+    
+    /// Done button can have two titles
+    /// * One before scratch starts
+    /// * One after scratch ends
     public var doneButtonTitle:String {
         get {
             return "Done"
@@ -70,7 +87,15 @@ public class GLScratchCardView: UIView {
             doneButton.setTitle(newValue, for: .normal)
         }
     }
+    
+    /// Title label can have two titles
+    /// * One before scratch starts
+    /// * One after scratch ends
     public var afterScratchTitle = ""
+    
+    /// Title label can have two titles
+    /// * One before scratch starts
+    /// * One after scratch ends
     public var scratchCardTitle :String {
         get {
             return ""
@@ -78,7 +103,15 @@ public class GLScratchCardView: UIView {
             scratchCardTitleLabel.text = newValue
         }
     }
+    
+    /// Sub Title label can have two titles
+    /// * One before scratch starts
+    /// * One after scratch ends
     public var afterScratchSubTitle = ""
+    
+    /// Sub Title label can have two titles
+    /// * One before scratch starts
+    /// * One after scratch ends
     public var scratchCardSubTitle :String {
         get {
             return ""
@@ -87,11 +120,11 @@ public class GLScratchCardView: UIView {
         }
     }
     
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib()
         setupUIComponents()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -122,6 +155,9 @@ public class GLScratchCardView: UIView {
         }
     }
     
+    /// Helps in subscribing to *GLScratchCardDelegate*, from multiple places at same time
+    ///
+    /// - Parameter delegate: self
     public func addDelegate(delegate: GLScratchCardDelegate?) {
         delegates.append(delegate)
     }

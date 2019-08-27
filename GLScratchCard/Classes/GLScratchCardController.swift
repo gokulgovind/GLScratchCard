@@ -2,14 +2,15 @@
 //  GLScratchCardController.swift
 //  GLScratchCard
 //
-//  Created by Payoda on 17/08/19.
+//  Created by gokulece26@gmail.com on 17/08/19.
 //
 
 import UIKit
 
+/// Main controller that contains Scratch UI
 open class GLScratchCardController: NSObject {
-    
-    
+
+    /// UIView loading UI components from XIB.
     lazy public var scratchCardView :GLScratchCardView = {
         let view = GLScratchCardView(frame: (application.keyWindow?.frame)!)
         view.addDelegate(delegate: self)
@@ -22,6 +23,7 @@ open class GLScratchCardController: NSObject {
         super.init()
     }
     
+    /// Presents the *GLScratchCardController* 
     public func presentScratchController() {
         scratchCardView.translatesAutoresizingMaskIntoConstraints = false
         

@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'I loved the way payments app like Google pay and phone pe used scratch card option to reward it\'s user. Hence with 💛 cloned the same scratch card effect for you guys out there'
+  s.description      = 'I loved the way payments app\'s like Google pay and phone pe used scratch card option to reward it\'s user. Hence with 💛 cloned the same scratch card effect for you guys out there'
 
   s.homepage         = 'https://github.com/gokulgovind/GLScratchCard'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'

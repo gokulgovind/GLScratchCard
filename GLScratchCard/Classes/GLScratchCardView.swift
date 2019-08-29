@@ -30,7 +30,7 @@ public class GLScratchCardView: UIView {
     // MARK: - Internal Variables
     fileprivate var delegates = [GLScratchCardDelegate?]()
     internal var isScratchStarted = false
-    
+    fileprivate var doneButtonHeight:CGFloat = 0
     // MARK: - Public Variables
     /// UIView that will be the *bottom layer* of scratch controller
     /// (i.e) **Will displayed when scratch happens on top layer**
@@ -140,6 +140,19 @@ public class GLScratchCardView: UIView {
         content.frame = self.bounds
         self.addSubview(content)
     }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if doneButton != nil {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.scratchView.layoutIfNeeded()
+                self.doneButton.layer.cornerRadius = self.doneButton.bounds.height / 2
+            }
+            
+        }
+    }
+    
     
     fileprivate func setupUIComponents() {
         doneButton.setTitle(doneButtonTitle, for: .normal)

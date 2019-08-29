@@ -29,7 +29,15 @@
                                 <color key="backgroundColor" red="0.67843137249999996" green="0.015686274510000001" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Demo"/>
                                 <connections>
-                                    <action selector="showDemo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nNd-0m-ti0"/>
+                                    <action selector="showGooglePayStyleDemo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p1Q-WW-QdN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz1-ya-Bhz">
+                                <rect key="frame" x="167" y="380" width="41" height="40"/>
+                                <color key="backgroundColor" red="0.67843137249999996" green="0.015686274510000001" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Demo"/>
+                                <connections>
+                                    <action selector="showPhonePayDemo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RsU-tU-bXO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -37,11 +45,13 @@
                         <constraints>
                             <constraint firstItem="5Po-u3-Z0h" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="65B-iN-MQH"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5Po-u3-Z0h" secondAttribute="bottom" id="IAM-2B-sYN"/>
+                            <constraint firstItem="Jz1-ya-Bhz" firstAttribute="leading" secondItem="g7n-Kw-lfm" secondAttribute="leading" id="ROi-zm-cf0"/>
                             <constraint firstItem="g7n-Kw-lfm" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="bsq-MZ-FDW"/>
                             <constraint firstItem="g7n-Kw-lfm" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="jMc-S6-cOO"/>
                             <constraint firstItem="5Po-u3-Z0h" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="knf-lr-BDp"/>
                             <constraint firstAttribute="trailing" secondItem="5Po-u3-Z0h" secondAttribute="trailing" id="nUI-Ih-nNs"/>
                             <constraint firstItem="g7n-Kw-lfm" firstAttribute="height" secondItem="5Po-u3-Z0h" secondAttribute="height" multiplier="0.0618238" id="qnq-Ht-wnx"/>
+                            <constraint firstItem="Jz1-ya-Bhz" firstAttribute="top" secondItem="g7n-Kw-lfm" secondAttribute="bottom" constant="26.5" id="sav-Jq-ATx"/>
                         </constraints>
                     </view>
                 </viewController>

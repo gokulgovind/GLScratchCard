@@ -75,15 +75,18 @@ public class GLScratchCardView: UIView {
     /// Done button can have two titles
     /// * One before scratch starts
     /// * One after scratch ends
-    public var afterScratchDoneButtonTitle = "Done"
+    /// If empty Done button will be hidden
+    public var afterScratchDoneButtonTitle = ""
     
     /// Done button can have two titles
     /// * One before scratch starts
     /// * One after scratch ends
+    /// If empty Done button will be hidden
     public var doneButtonTitle:String {
         get {
-            return "Done"
+            return ""
         } set {
+            doneButton.isHidden = newValue == ""
             doneButton.setTitle(newValue, for: .normal)
         }
     }
@@ -156,6 +159,7 @@ public class GLScratchCardView: UIView {
     
     fileprivate func setupUIComponents() {
         doneButton.setTitle(doneButtonTitle, for: .normal)
+        doneButton.isHidden = doneButtonTitle == ""
         scratchCardTitleLabel.text = scratchCardTitle
         scratchCardSubTitleLabel.text = scratchCardSubTitle
         scratchContainerView.bringSubview(toFront: scratchCardImageView)

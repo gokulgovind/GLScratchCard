@@ -12,6 +12,7 @@
 		3B2C1D0539D1359049F0C6E2A42350C4 /* Pods-GLScratchCard_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3792260451EB3F3D6DACE274183E80CB /* Pods-GLScratchCard_Tests-dummy.m */; };
 		50CB99260AF69F8738A78EDD6DC1D85B /* Pods-GLScratchCard_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22566EA530EEDC8FABC8B6B361185438 /* Pods-GLScratchCard_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51037CFB5358B27390EA3910E84952B4 /* Pods-GLScratchCard_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A5F0BC1A0D8B2C4BBEF5C13647E1C13E /* Pods-GLScratchCard_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5827A44723176F260033C64F /* glscratch_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 5827A44623176F250033C64F /* glscratch_close.png */; };
 		5B033E97B37EE74A0C7036911A5286EA /* Pods-GLScratchCard_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 546EFADCE447A6D99F5EA62A8CC326E9 /* Pods-GLScratchCard_Example-dummy.m */; };
 		63DB045946E8E364AF65D211F4C148D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		6D37CAC0F3E624C778FF5C469BBF76A1 /* GLScratchCardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF0919EE27C50717577D56DFA3C8B2 /* GLScratchCardImageView.swift */; };
@@ -59,6 +60,7 @@
 		504AA11702E1B6C51434499F9C3BA1A0 /* Pods-GLScratchCard_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLScratchCard_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		546EFADCE447A6D99F5EA62A8CC326E9 /* Pods-GLScratchCard_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GLScratchCard_Example-dummy.m"; sourceTree = "<group>"; };
 		56E5DD0B37515C73BE769CAA0FCC619F /* Pods-GLScratchCard_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLScratchCard_Example-frameworks.sh"; sourceTree = "<group>"; };
+		5827A44623176F250033C64F /* glscratch_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glscratch_close.png; path = GLScratchCard/Assets/glscratch_close.png; sourceTree = "<group>"; };
 		59FC30C3DDFF1C3E84EE327D14388A0F /* GLScratchCard-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GLScratchCard-Info.plist"; sourceTree = "<group>"; };
 		5C4B2705FB260AC50D3F27C748091F48 /* Pods_GLScratchCard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLScratchCard_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F26C54F3C6DBBED0F62B85B996482A /* Pods-GLScratchCard_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLScratchCard_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -186,10 +188,11 @@
 		8B83034AAD34EED2955410FBFC06720F /* GLScratchCard */ = {
 			isa = PBXGroup;
 			children = (
+				5827A44623176F250033C64F /* glscratch_close.png */,
 				C4E158D6F9FFE1A7304E05D8479A74B8 /* GLScratchCardController.swift */,
-				ACDF0919EE27C50717577D56DFA3C8B2 /* GLScratchCardImageView.swift */,
 				67E8C6525B429A54218081AAA55B934B /* GLScratchCardView.swift */,
 				8B1486EA8D99593614BF07795F107742 /* GLScratchCardView.xib */,
+				ACDF0919EE27C50717577D56DFA3C8B2 /* GLScratchCardImageView.swift */,
 				735FBE56AA70C697DE0EE65FCAD1DE8C /* scratch_image_new.png */,
 				D375547C89DBE49503B66B9F801589B9 /* Pod */,
 				8809686F109BE73A6B6332F4CC84A1E0 /* Support Files */,
@@ -397,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5827A44723176F260033C64F /* glscratch_close.png in Resources */,
 				ED450A9EE4FC8B855FF4D576C83C3CD7 /* GLScratchCard.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

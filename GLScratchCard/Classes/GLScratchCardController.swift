@@ -73,11 +73,12 @@ extension GLScratchCardController: GLScratchCarImageViewDelegate {
     }
     
     public func didScratchEnded() {
-        scratchCardView.doneButton.isHidden = false
+        scratchCardView.doneButton.isHidden = scratchCardView.afterScratchDoneButtonTitle == ""
         scratchCardView.scratchCardTitleLabel.isHidden = false
         scratchCardView.scratchCardSubTitleLabel.isHidden = false
         
         scratchCardView.doneButton.setTitle(scratchCardView.afterScratchDoneButtonTitle , for: .normal)
+        
         scratchCardView.scratchCardTitleLabel.text = scratchCardView.afterScratchTitle
         scratchCardView.scratchCardSubTitleLabel.text = scratchCardView.afterScratchSubTitle
     }

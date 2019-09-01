@@ -10,6 +10,10 @@ import UIKit
 import GLScratchCard
 
 class ViewController: UIViewController  {
+    @IBOutlet weak var demoOne: UIButton!
+    @IBOutlet weak var demoTwo: UIButton!
+    @IBOutlet weak var demoThree: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,11 +25,13 @@ class ViewController: UIViewController  {
     }
 
     @IBAction func showGooglePayStyleDemo(_ sender: UIButton) {
+        hideDemoButtons()
         let view = UIImageView()
         view.image = UIImage(named: "cash_back")
         
         let controller = GLScratchCardController(title: "")
         controller.scratchCardView.addDelegate(delegate: self)
+        
         controller.scratchCardView.doneButtonTitle = "Gift to a friend"
         controller.scratchCardView.scratchCardTitle = "Earn up to ₹1,0000"
         controller.scratchCardView.scratchCardSubTitle = "From Google Pay \nEarned for paying \nGokul"
@@ -36,12 +42,16 @@ class ViewController: UIViewController  {
         
         controller.scratchCardView.bottomLayerView = view
         controller.scratchCardView.topLayerImage = UIImage(named:"scratch_image")!
+        
         controller.scratchCardView.scratchCardImageView.lineWidth = 50
+        controller.scratchCardView.scratchCardImageView.lineType = .round
+        
         controller.presentScratchController()
 
     }
     
     @IBAction func showPhonePayDemo(_ sender: UIButton) {
+        hideDemoButtons()
         let view = UIImageView()
         view.image = #imageLiteral(resourceName: "cash_back_phonepe.jpg")
         
@@ -50,23 +60,32 @@ class ViewController: UIViewController  {
         
         controller.scratchCardView.bottomLayerView = view
         controller.scratchCardView.topLayerImage = #imageLiteral(resourceName: "scratch_card_phonepe.jpg")
+        
         controller.scratchCardView.scratchCardImageView.lineWidth = 50
+        controller.scratchCardView.scratchCardImageView.lineType = .round
+        
         controller.presentScratchController()
         
     }
     
-    @IBAction func showCustomScratchCardDemo(_ sender: UIButton) {
-        
+    fileprivate func hideDemoButtons() {
+        demoOne.isHidden = !demoOne.isHidden
+        demoTwo.isHidden = !demoTwo.isHidden
+        demoThree.isHidden = !demoThree.isHidden
     }
+    /// Used Segu, Check Main.storyboard
+//    @IBAction func showCustomScratchCardDemo(_ sender: UIButton) {
+//
+//    }
 }
 
 extension ViewController: GLScratchCardDelegate {
     func didDoneButtonPressed(sender: UIButton) {
-        print("Done button ViewController")
+        hideDemoButtons()
     }
     
     func didCloseButtonPressed(sender: UIButton) {
-        print("close button ViewController")
+        hideDemoButtons()
     }
 }
 

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,58 +14,119 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GLScratchCard_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="5Po-u3-Z0h">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_bg_2" translatesAutoresizingMaskIntoConstraints="NO" id="5Po-u3-Z0h">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7n-Kw-lfm">
-                                <rect key="frame" x="167" y="313.5" width="41" height="40"/>
-                                <color key="backgroundColor" red="0.67843137249999996" green="0.015686274510000001" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Demo"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7n-Kw-lfm">
+                                <rect key="frame" x="87.5" y="316" width="200" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Rm8-47-fmU"/>
+                                </constraints>
+                                <state key="normal" title="Google Pay">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="showGooglePayStyleDemo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="p1Q-WW-QdN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz1-ya-Bhz">
-                                <rect key="frame" x="167" y="380" width="41" height="40"/>
-                                <color key="backgroundColor" red="0.67843137249999996" green="0.015686274510000001" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Demo"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz1-ya-Bhz">
+                                <rect key="frame" x="87.5" y="381" width="200" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Phone Pe">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="showPhonePayDemo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RsU-tU-bXO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-U6-7nF">
-                                <rect key="frame" x="167" y="455" width="41" height="40"/>
-                                <color key="backgroundColor" red="0.67843137249999996" green="0.015686274510000001" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Demo"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-U6-7nF">
+                                <rect key="frame" x="87.5" y="446" width="200" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Custom View">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="T82-6I-gJA" kind="presentation" modalPresentationStyle="overFullScreen" id="3B5-wT-sNW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=&gt; Inbuilt scratch card effect of Google Pay and Phone Pe " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQg-Ew-AY4">
+                                <rect key="frame" x="20" y="92" width="335" height="42"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=&gt; Subclass GLScratchCardImageView to create your own scratch card effect" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qee-v2-fJS">
+                                <rect key="frame" x="20" y="142" width="335" height="41"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GLScratchCard" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xut-IO-JHe">
+                                <rect key="frame" x="127.5" y="50" width="120" height="22"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5Po-u3-Z0h" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="65B-iN-MQH"/>
-                            <constraint firstItem="8FJ-U6-7nF" firstAttribute="top" secondItem="Jz1-ya-Bhz" secondAttribute="bottom" constant="35" id="BGv-kB-Eag"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5Po-u3-Z0h" secondAttribute="bottom" id="IAM-2B-sYN"/>
-                            <constraint firstItem="Jz1-ya-Bhz" firstAttribute="leading" secondItem="g7n-Kw-lfm" secondAttribute="leading" id="ROi-zm-cf0"/>
-                            <constraint firstItem="g7n-Kw-lfm" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="bsq-MZ-FDW"/>
+                            <constraint firstItem="qee-v2-fJS" firstAttribute="trailing" secondItem="LQg-Ew-AY4" secondAttribute="trailing" id="3iz-Uk-8EW"/>
+                            <constraint firstItem="Jz1-ya-Bhz" firstAttribute="height" secondItem="g7n-Kw-lfm" secondAttribute="height" id="77U-3u-ReD"/>
+                            <constraint firstItem="5Po-u3-Z0h" firstAttribute="leading" secondItem="R5m-Pa-Ag5" secondAttribute="leading" id="Ck3-Rk-flh"/>
+                            <constraint firstItem="g7n-Kw-lfm" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="35:667" id="IYy-ja-HHS"/>
+                            <constraint firstItem="Jz1-ya-Bhz" firstAttribute="top" secondItem="g7n-Kw-lfm" secondAttribute="bottom" constant="30" id="KkE-Me-5ht"/>
+                            <constraint firstItem="Jz1-ya-Bhz" firstAttribute="trailing" secondItem="g7n-Kw-lfm" secondAttribute="trailing" id="MNo-xK-BCs"/>
+                            <constraint firstItem="Jz1-ya-Bhz" firstAttribute="leading" secondItem="g7n-Kw-lfm" secondAttribute="leading" id="RyX-ma-Yyh"/>
+                            <constraint firstItem="R5m-Pa-Ag5" firstAttribute="trailing" secondItem="LQg-Ew-AY4" secondAttribute="trailing" constant="20" id="TDq-U7-vPb"/>
+                            <constraint firstItem="5Po-u3-Z0h" firstAttribute="bottom" secondItem="R5m-Pa-Ag5" secondAttribute="bottom" constant="35" id="TQZ-VK-4zn"/>
+                            <constraint firstItem="5Po-u3-Z0h" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="WjE-L0-Olm"/>
+                            <constraint firstItem="g7n-Kw-lfm" firstAttribute="centerX" secondItem="R5m-Pa-Ag5" secondAttribute="centerX" id="bsq-MZ-FDW"/>
+                            <constraint firstItem="xut-IO-JHe" firstAttribute="centerX" secondItem="R5m-Pa-Ag5" secondAttribute="centerX" id="ihq-0u-Zhm"/>
+                            <constraint firstItem="8FJ-U6-7nF" firstAttribute="leading" secondItem="Jz1-ya-Bhz" secondAttribute="leading" id="jLu-DO-SZo"/>
                             <constraint firstItem="g7n-Kw-lfm" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="jMc-S6-cOO"/>
-                            <constraint firstItem="5Po-u3-Z0h" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="knf-lr-BDp"/>
-                            <constraint firstAttribute="trailing" secondItem="5Po-u3-Z0h" secondAttribute="trailing" id="nUI-Ih-nNs"/>
-                            <constraint firstItem="g7n-Kw-lfm" firstAttribute="height" secondItem="5Po-u3-Z0h" secondAttribute="height" multiplier="0.0618238" id="qnq-Ht-wnx"/>
-                            <constraint firstItem="Jz1-ya-Bhz" firstAttribute="top" secondItem="g7n-Kw-lfm" secondAttribute="bottom" constant="26.5" id="sav-Jq-ATx"/>
-                            <constraint firstItem="8FJ-U6-7nF" firstAttribute="trailing" secondItem="Jz1-ya-Bhz" secondAttribute="trailing" id="t5e-GE-Gdr"/>
-                            <constraint firstItem="8FJ-U6-7nF" firstAttribute="leading" secondItem="Jz1-ya-Bhz" secondAttribute="leading" id="xdd-f5-Ur1"/>
+                            <constraint firstItem="8FJ-U6-7nF" firstAttribute="top" secondItem="Jz1-ya-Bhz" secondAttribute="bottom" constant="30" id="kdP-iE-kAn"/>
+                            <constraint firstItem="LQg-Ew-AY4" firstAttribute="leading" secondItem="R5m-Pa-Ag5" secondAttribute="leading" constant="20" id="mlw-Vc-R6U"/>
+                            <constraint firstItem="qee-v2-fJS" firstAttribute="top" secondItem="LQg-Ew-AY4" secondAttribute="bottom" constant="8" id="nHN-PM-b9K"/>
+                            <constraint firstItem="LQg-Ew-AY4" firstAttribute="top" secondItem="xut-IO-JHe" secondAttribute="bottom" constant="20" id="nWF-ID-ug4"/>
+                            <constraint firstItem="xut-IO-JHe" firstAttribute="top" secondItem="R5m-Pa-Ag5" secondAttribute="top" constant="30" id="qwc-eZ-LjZ"/>
+                            <constraint firstItem="qee-v2-fJS" firstAttribute="leading" secondItem="LQg-Ew-AY4" secondAttribute="leading" id="sfp-7J-3Fm"/>
+                            <constraint firstItem="8FJ-U6-7nF" firstAttribute="trailing" secondItem="Jz1-ya-Bhz" secondAttribute="trailing" id="xWA-7H-8HT"/>
+                            <constraint firstItem="5Po-u3-Z0h" firstAttribute="trailing" secondItem="R5m-Pa-Ag5" secondAttribute="trailing" id="y1Z-fd-lGx"/>
+                            <constraint firstItem="8FJ-U6-7nF" firstAttribute="height" secondItem="Jz1-ya-Bhz" secondAttribute="height" id="yQq-Pz-JNw"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="R5m-Pa-Ag5"/>
                     </view>
+                    <connections>
+                        <outlet property="demoOne" destination="g7n-Kw-lfm" id="4eP-oH-h4N"/>
+                        <outlet property="demoThree" destination="8FJ-U6-7nF" id="adU-y4-ZpK"/>
+                        <outlet property="demoTwo" destination="Jz1-ya-Bhz" id="HtZ-fj-nuN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,10 +136,6 @@
         <scene sceneID="cRJ-EQ-RBM">
             <objects>
                 <viewController storyboardIdentifier="Demo3ViewController" id="T82-6I-gJA" customClass="Demo3ViewController" customModule="GLScratchCard_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yFS-LX-Kzv"/>
-                        <viewControllerLayoutGuide type="bottom" id="Su5-HJ-giG"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9dj-2d-smW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,12 +197,13 @@
                                     <constraint firstItem="uEA-sv-1KX" firstAttribute="top" secondItem="9C8-cR-xVJ" secondAttribute="top" constant="20" id="0OO-hv-cfn"/>
                                     <constraint firstAttribute="bottom" secondItem="28S-rM-jsI" secondAttribute="bottom" constant="20" id="Auc-ME-WbJ"/>
                                     <constraint firstItem="MdW-8F-W8Q" firstAttribute="height" secondItem="uEA-sv-1KX" secondAttribute="height" id="DbI-Ya-5J7"/>
+                                    <constraint firstAttribute="trailing" secondItem="MdW-8F-W8Q" secondAttribute="trailing" constant="104" id="PfH-4d-b6n"/>
                                     <constraint firstItem="27i-up-ODq" firstAttribute="top" secondItem="9C8-cR-xVJ" secondAttribute="top" id="RTs-Bj-g9d"/>
                                     <constraint firstItem="27i-up-ODq" firstAttribute="leading" secondItem="9C8-cR-xVJ" secondAttribute="leading" id="SWJ-97-hzK"/>
                                     <constraint firstAttribute="trailing" secondItem="28S-rM-jsI" secondAttribute="trailing" constant="20" id="cW1-yw-DbW"/>
                                     <constraint firstItem="MdW-8F-W8Q" firstAttribute="top" secondItem="uEA-sv-1KX" secondAttribute="bottom" constant="1" id="gnE-oV-5gq"/>
                                     <constraint firstAttribute="trailing" secondItem="uEA-sv-1KX" secondAttribute="trailing" constant="20" id="iHI-xj-lTo"/>
-                                    <constraint firstItem="MdW-8F-W8Q" firstAttribute="leading" secondItem="uEA-sv-1KX" secondAttribute="leading" id="jbf-j0-h08"/>
+                                    <constraint firstItem="MdW-8F-W8Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uEA-sv-1KX" secondAttribute="leading" id="jbf-j0-h08"/>
                                     <constraint firstItem="28S-rM-jsI" firstAttribute="leading" secondItem="9C8-cR-xVJ" secondAttribute="leading" constant="20" id="l4e-sR-wK1"/>
                                     <constraint firstAttribute="trailing" secondItem="27i-up-ODq" secondAttribute="trailing" id="tit-MJ-E10"/>
                                     <constraint firstAttribute="bottom" secondItem="27i-up-ODq" secondAttribute="bottom" id="xSz-Ij-4Ya"/>
@@ -169,13 +228,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="X7j-wg-tfV" firstAttribute="top" secondItem="yFS-LX-Kzv" secondAttribute="bottom" constant="8" id="1Cj-Pu-vkL"/>
-                            <constraint firstAttribute="trailing" secondItem="9C8-cR-xVJ" secondAttribute="trailing" constant="10" id="629-2G-FxX"/>
+                            <constraint firstItem="X7j-wg-tfV" firstAttribute="top" secondItem="72R-zA-mzE" secondAttribute="top" constant="8" id="1Cj-Pu-vkL"/>
+                            <constraint firstItem="72R-zA-mzE" firstAttribute="trailing" secondItem="9C8-cR-xVJ" secondAttribute="trailing" constant="10" id="629-2G-FxX"/>
                             <constraint firstItem="X7j-wg-tfV" firstAttribute="leading" secondItem="9dj-2d-smW" secondAttribute="leadingMargin" id="Kjp-kF-IQa"/>
                             <constraint firstItem="9C8-cR-xVJ" firstAttribute="centerY" secondItem="9dj-2d-smW" secondAttribute="centerY" id="cv0-B2-VXw"/>
                             <constraint firstItem="9C8-cR-xVJ" firstAttribute="height" secondItem="9dj-2d-smW" secondAttribute="height" multiplier="200:667" id="joG-O2-8YB"/>
-                            <constraint firstItem="9C8-cR-xVJ" firstAttribute="leading" secondItem="9dj-2d-smW" secondAttribute="leading" constant="10" id="ykp-xw-cqr"/>
+                            <constraint firstItem="9C8-cR-xVJ" firstAttribute="leading" secondItem="72R-zA-mzE" secondAttribute="leading" constant="10" id="ykp-xw-cqr"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="72R-zA-mzE"/>
                     </view>
                     <connections>
                         <outlet property="scratchCardImageView" destination="arf-Er-NEa" id="OKB-wq-HCx"/>
@@ -189,7 +249,7 @@
     <resources>
         <image name="gl_demo3_bg_view" width="774" height="250"/>
         <image name="glscratch_close.png" width="24" height="24"/>
+        <image name="main_bg_2" width="234.75" height="450"/>
         <image name="scratch_effect_view" width="510" height="56"/>
-        <image name="test" width="1440" height="900"/>
     </resources>
 </document>

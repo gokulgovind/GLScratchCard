@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13F183F5BFC07A2CC2531E99 /* Pods_GLScratchCard_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36B540A0797B79A7A95D3A2 /* Pods_GLScratchCard_Tests.framework */; };
+		5857E359231BDD450009742C /* Demo3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857E358231BDD450009742C /* Demo3ViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		27B4B4F7197D97B7C771B495 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2CF5C04F7DE1FEBD4E5CF94D /* GLScratchCard.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GLScratchCard.podspec; path = ../GLScratchCard.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4D123D2E8B82EC2524D969B5 /* Pods-GLScratchCard_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLScratchCard_Tests.release.xcconfig"; path = "Target Support Files/Pods-GLScratchCard_Tests/Pods-GLScratchCard_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5857E358231BDD450009742C /* Demo3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo3ViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GLScratchCard_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLScratchCard_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				5857E358231BDD450009742C /* Demo3ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				5857E359231BDD450009742C /* Demo3ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

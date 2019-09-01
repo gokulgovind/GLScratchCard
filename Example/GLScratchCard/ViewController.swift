@@ -54,6 +54,10 @@ class ViewController: UIViewController  {
         controller.presentScratchController()
         
     }
+    
+    @IBAction func showCustomScratchCardDemo(_ sender: UIButton) {
+        
+    }
 }
 
 extension ViewController: GLScratchCardDelegate {

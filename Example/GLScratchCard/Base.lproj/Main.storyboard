@@ -40,10 +40,19 @@
                                     <action selector="showPhonePayDemo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RsU-tU-bXO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FJ-U6-7nF">
+                                <rect key="frame" x="167" y="455" width="41" height="40"/>
+                                <color key="backgroundColor" red="0.67843137249999996" green="0.015686274510000001" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Demo"/>
+                                <connections>
+                                    <segue destination="T82-6I-gJA" kind="presentation" modalPresentationStyle="overFullScreen" id="3B5-wT-sNW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5Po-u3-Z0h" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="65B-iN-MQH"/>
+                            <constraint firstItem="8FJ-U6-7nF" firstAttribute="top" secondItem="Jz1-ya-Bhz" secondAttribute="bottom" constant="35" id="BGv-kB-Eag"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5Po-u3-Z0h" secondAttribute="bottom" id="IAM-2B-sYN"/>
                             <constraint firstItem="Jz1-ya-Bhz" firstAttribute="leading" secondItem="g7n-Kw-lfm" secondAttribute="leading" id="ROi-zm-cf0"/>
                             <constraint firstItem="g7n-Kw-lfm" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="bsq-MZ-FDW"/>
@@ -52,6 +61,8 @@
                             <constraint firstAttribute="trailing" secondItem="5Po-u3-Z0h" secondAttribute="trailing" id="nUI-Ih-nNs"/>
                             <constraint firstItem="g7n-Kw-lfm" firstAttribute="height" secondItem="5Po-u3-Z0h" secondAttribute="height" multiplier="0.0618238" id="qnq-Ht-wnx"/>
                             <constraint firstItem="Jz1-ya-Bhz" firstAttribute="top" secondItem="g7n-Kw-lfm" secondAttribute="bottom" constant="26.5" id="sav-Jq-ATx"/>
+                            <constraint firstItem="8FJ-U6-7nF" firstAttribute="trailing" secondItem="Jz1-ya-Bhz" secondAttribute="trailing" id="t5e-GE-Gdr"/>
+                            <constraint firstItem="8FJ-U6-7nF" firstAttribute="leading" secondItem="Jz1-ya-Bhz" secondAttribute="leading" id="xdd-f5-Ur1"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -59,8 +70,126 @@
             </objects>
             <point key="canvasLocation" x="72.799999999999997" y="26.53673163418291"/>
         </scene>
+        <!--Demo3 View Controller-->
+        <scene sceneID="cRJ-EQ-RBM">
+            <objects>
+                <viewController storyboardIdentifier="Demo3ViewController" id="T82-6I-gJA" customClass="Demo3ViewController" customModule="GLScratchCard_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yFS-LX-Kzv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Su5-HJ-giG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9dj-2d-smW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9C8-cR-xVJ">
+                                <rect key="frame" x="10" y="233.5" width="355" height="200"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gl_demo3_bg_view" translatesAutoresizingMaskIntoConstraints="NO" id="27i-up-ODq">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="200"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28S-rM-jsI">
+                                        <rect key="frame" x="20" y="140" width="315" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="673 - 455 - 2353463" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avj-aL-GUs">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="23"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scratch_effect_view" translatesAutoresizingMaskIntoConstraints="NO" id="arf-Er-NEa" customClass="GLScratchCardImageView" customModule="GLScratchCard">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="arf-Er-NEa" firstAttribute="top" secondItem="28S-rM-jsI" secondAttribute="top" id="0TR-r0-Jf4"/>
+                                            <constraint firstAttribute="trailing" secondItem="arf-Er-NEa" secondAttribute="trailing" id="7cf-Ab-wfn"/>
+                                            <constraint firstAttribute="bottom" secondItem="arf-Er-NEa" secondAttribute="bottom" id="F74-ih-cFc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Avj-aL-GUs" secondAttribute="trailing" id="FNw-5W-Le8"/>
+                                            <constraint firstItem="Avj-aL-GUs" firstAttribute="top" secondItem="28S-rM-jsI" secondAttribute="top" id="ILk-QR-eXd"/>
+                                            <constraint firstAttribute="height" constant="40" id="LIA-aP-Hgo"/>
+                                            <constraint firstItem="Avj-aL-GUs" firstAttribute="leading" secondItem="28S-rM-jsI" secondAttribute="leading" id="Tv5-Qh-Qq7"/>
+                                            <constraint firstItem="arf-Er-NEa" firstAttribute="leading" secondItem="28S-rM-jsI" secondAttribute="leading" id="b3a-NH-q4L"/>
+                                            <constraint firstAttribute="bottom" secondItem="Avj-aL-GUs" secondAttribute="bottom" id="dlM-uz-xTJ"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scratch &amp;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-sv-1KX">
+                                        <rect key="frame" x="184.5" y="20" width="150.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="C0e-cw-abt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="32"/>
+                                        <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="0.0" height="3"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdW-8F-W8Q">
+                                        <rect key="frame" x="184.5" y="61" width="66.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="32"/>
+                                        <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="0.0" height="3"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uEA-sv-1KX" firstAttribute="top" secondItem="9C8-cR-xVJ" secondAttribute="top" constant="20" id="0OO-hv-cfn"/>
+                                    <constraint firstAttribute="bottom" secondItem="28S-rM-jsI" secondAttribute="bottom" constant="20" id="Auc-ME-WbJ"/>
+                                    <constraint firstItem="MdW-8F-W8Q" firstAttribute="height" secondItem="uEA-sv-1KX" secondAttribute="height" id="DbI-Ya-5J7"/>
+                                    <constraint firstItem="27i-up-ODq" firstAttribute="top" secondItem="9C8-cR-xVJ" secondAttribute="top" id="RTs-Bj-g9d"/>
+                                    <constraint firstItem="27i-up-ODq" firstAttribute="leading" secondItem="9C8-cR-xVJ" secondAttribute="leading" id="SWJ-97-hzK"/>
+                                    <constraint firstAttribute="trailing" secondItem="28S-rM-jsI" secondAttribute="trailing" constant="20" id="cW1-yw-DbW"/>
+                                    <constraint firstItem="MdW-8F-W8Q" firstAttribute="top" secondItem="uEA-sv-1KX" secondAttribute="bottom" constant="1" id="gnE-oV-5gq"/>
+                                    <constraint firstAttribute="trailing" secondItem="uEA-sv-1KX" secondAttribute="trailing" constant="20" id="iHI-xj-lTo"/>
+                                    <constraint firstItem="MdW-8F-W8Q" firstAttribute="leading" secondItem="uEA-sv-1KX" secondAttribute="leading" id="jbf-j0-h08"/>
+                                    <constraint firstItem="28S-rM-jsI" firstAttribute="leading" secondItem="9C8-cR-xVJ" secondAttribute="leading" constant="20" id="l4e-sR-wK1"/>
+                                    <constraint firstAttribute="trailing" secondItem="27i-up-ODq" secondAttribute="trailing" id="tit-MJ-E10"/>
+                                    <constraint firstAttribute="bottom" secondItem="27i-up-ODq" secondAttribute="bottom" id="xSz-Ij-4Ya"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7j-wg-tfV">
+                                <rect key="frame" x="16" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="lyX-48-3oy"/>
+                                    <constraint firstAttribute="height" constant="30" id="ps7-vH-OXF"/>
+                                </constraints>
+                                <state key="normal" image="glscratch_close.png"/>
+                                <connections>
+                                    <action selector="closeDemo3:" destination="T82-6I-gJA" eventType="touchUpInside" id="rTW-24-DNw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X7j-wg-tfV" firstAttribute="top" secondItem="yFS-LX-Kzv" secondAttribute="bottom" constant="8" id="1Cj-Pu-vkL"/>
+                            <constraint firstAttribute="trailing" secondItem="9C8-cR-xVJ" secondAttribute="trailing" constant="10" id="629-2G-FxX"/>
+                            <constraint firstItem="X7j-wg-tfV" firstAttribute="leading" secondItem="9dj-2d-smW" secondAttribute="leadingMargin" id="Kjp-kF-IQa"/>
+                            <constraint firstItem="9C8-cR-xVJ" firstAttribute="centerY" secondItem="9dj-2d-smW" secondAttribute="centerY" id="cv0-B2-VXw"/>
+                            <constraint firstItem="9C8-cR-xVJ" firstAttribute="height" secondItem="9dj-2d-smW" secondAttribute="height" multiplier="200:667" id="joG-O2-8YB"/>
+                            <constraint firstItem="9C8-cR-xVJ" firstAttribute="leading" secondItem="9dj-2d-smW" secondAttribute="leading" constant="10" id="ykp-xw-cqr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scratchCardImageView" destination="arf-Er-NEa" id="OKB-wq-HCx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ma9-M1-1fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="26.53673163418291"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="gl_demo3_bg_view" width="774" height="250"/>
+        <image name="glscratch_close.png" width="24" height="24"/>
+        <image name="scratch_effect_view" width="510" height="56"/>
         <image name="test" width="1440" height="900"/>
     </resources>
 </document>

@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/GLScratchCard.svg?style=flat)](https://cocoapods.org/pods/GLScratchCard)
 [![Platform](https://img.shields.io/cocoapods/p/GLScratchCard.svg?style=flat)](https://cocoapods.org/pods/GLScratchCard)
 
+![overView](ScreenShots/Demo1.png)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

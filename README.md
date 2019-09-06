@@ -26,11 +26,15 @@ it, simply add the following line to your Podfile:
 pod 'GLScratchCard'
 ```
 ## Manual
-Copy the files from ~/GLNotificationBar/GLNotificationBar/Classes to your project.
+Copy the files from ~/GLScratchCard/GLScratchCard/Classes to your project.
+
+## User Guide
+
+### Swift
 
 ## Author
 
-gokulece26@gmail.com, gokul.g@ndot.in
+gokulece26@gmail.com
 
 ## License
 

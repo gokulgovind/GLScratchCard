@@ -26,10 +26,8 @@ class ViewController: UIViewController  {
 
     @IBAction func showGooglePayStyleDemo(_ sender: UIButton) {
         hideDemoButtons()
-        let view = UIImageView()
-        view.image = UIImage(named: "cash_back")
         
-        let controller = GLScratchCardController(title: "")
+        let controller = GLScratchCardController()
         controller.scratchCardView.addDelegate(delegate: self)
         
         controller.scratchCardView.doneButtonTitle = "Gift to a friend"
@@ -40,7 +38,7 @@ class ViewController: UIViewController  {
         controller.scratchCardView.afterScratchTitle = "Woohoo!"
         controller.scratchCardView.afterScratchSubTitle = "Expect payment within a weak."
         
-        controller.scratchCardView.bottomLayerView = view
+        controller.scratchCardView.bottomLayerView = UIImageView(image: UIImage(named: "cash_back"))
         controller.scratchCardView.topLayerImage = UIImage(named:"scratch_image")!
         
         controller.scratchCardView.scratchCardImageView.lineWidth = 50
@@ -52,17 +50,12 @@ class ViewController: UIViewController  {
     
     @IBAction func showPhonePayDemo(_ sender: UIButton) {
         hideDemoButtons()
-        let view = UIImageView()
-        view.image = #imageLiteral(resourceName: "cash_back_phonepe.jpg")
         
-        let controller = GLScratchCardController(title: "")
+        let controller = GLScratchCardController()
         controller.scratchCardView.addDelegate(delegate: self)
         
-        controller.scratchCardView.bottomLayerView = view
+        controller.scratchCardView.bottomLayerView = UIImageView(image:  #imageLiteral(resourceName: "cash_back_phonepe.jpg"))
         controller.scratchCardView.topLayerImage = #imageLiteral(resourceName: "scratch_card_phonepe.jpg")
-        
-        controller.scratchCardView.scratchCardImageView.lineWidth = 50
-        controller.scratchCardView.scratchCardImageView.lineType = .round
         
         controller.presentScratchController()
         

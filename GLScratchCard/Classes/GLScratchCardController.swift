@@ -22,7 +22,7 @@ open class GLScratchCardController: NSObject {
         return view
     }()
     
-    public init(title: String) {
+    public override init() {
         super.init()
     }
     

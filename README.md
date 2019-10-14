@@ -63,33 +63,42 @@ Copy the files from ~/Pods/DevelopmentPods/GLScratchCard/ to your project.
 
 ### Basic Usage
 
+```swift
 let controller = GLScratchCardController()
 controller.scratchCardView.addDelegate(delegate: self)
 controller.scratchCardView.bottomLayerView = UIImageView(image: UIImage(named: "cash_back"))
 controller.scratchCardView.topLayerImage = UIImage(named:"scratch_image")!
 controller.presentScratchController()
+```
 
 ![sampleGifDPay](ScreenShots/screen_record1.gif)
 
 ### Break Down
+```swift
 let controller = GLScratchCardController() 
+```
 
 ### Setting up Components
 
 Titles to be shown initilly, before scratch starts
 
+```swift
 controller.scratchCardView.doneButtonTitle = "Gift to a friend"
 controller.scratchCardView.scratchCardTitle = "Earn up to ₹1,0000"
 controller.scratchCardView.scratchCardSubTitle = "From Google Pay \nEarned for paying \nGokul"
+```
 
 Title to be show after scratch ends,
 
+```swift
 controller.scratchCardView.afterScratchDoneButtonTitle = "Done"
 controller.scratchCardView.afterScratchTitle = "Woohoo!"
 controller.scratchCardView.afterScratchSubTitle = "Expect payment within a weak."
+```
 
 Top layer image view,
 
+```swift
 controller.scratchCardView.topLayerImage = UIImage(named:"scratch_image")!
 
 Bottom layer image view (one that will be reviled after scratching ends),
@@ -100,27 +109,34 @@ Can customise scratch size and shape (.round, .square, .butt),
 
 controller.scratchCardView.scratchCardImageView.lineWidth = 50
 controller.scratchCardView.scratchCardImageView.lineType = .round
+```
 
 ### Delegates
 
-1. GLScratchCardDelegate
-2. GLScratchCarImageViewDelegate
+1. `GLScratchCardDelegate`
+2. `GLScratchCarImageViewDelegate`
 
 Add delegates,
 
+```swift
 controller.scratchCardView.addDelegate(delegate: self)
 controller.scratchCardView.scratchCardImageView.addDelegate(delegate:self)
+```
 
 #### GLScratchCardDelegate
 
+```swift
 func didCloseButtonPressed(sender: UIButton)
 func didDoneButtonPressed(sender: UIButton)
+```
 
 #### GLScratchCarImageViewDelegate
 
+```swift
 func scratchpercentageDidChange(value: Float)
 func didScratchStarted()
 func didScratchEnded()
+```
 
 ![sampleGifDPay](ScreenShots/screen_record2.gif)
 
